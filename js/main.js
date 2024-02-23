@@ -11,10 +11,13 @@ window.addEventListener('scroll', () => {
     // front.style.marginTop  = value * 0.4 + 'px';
     // front2.style.maskPosition = "100% 0%"
 
-    let tl = gsap.timeline({})
+    if(value > 50) {
+        let tl = gsap.timeline({})
 
-    tl
-    .to(front2, { duration: 2, maskPosition: "0% 0%", ease: "steps(30)" })
+        tl
+        .to('.bg_overlay', { duration: 1.5, height: 0, ease: "expo.out" })
+    }
+    
 });
 
 
