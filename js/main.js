@@ -1,23 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-
-    let bg = document.getElementById('bg');
-    let frontLeft = document.getElementById('frontLeft');
-    let frontRight = document.getElementById('frontRight');
-    let front3 = document.getElementById('front3');
-    let front4 = document.getElementById('front4');
+    let front = document.getElementById('front');
+    let front2 = document.getElementById('front2');
     let planet = document.getElementById('planet');
 
 window.addEventListener('scroll', () => {
     let value = window.scrollY;
 
-    bg.style.marginTop  = value * 0.6 + 'px';
     planet.style.marginTop  = value * 0.7 + 'px';
-    // frontRight.style.right = value * 0.4 + 'px';
-    // frontLeft.style.left = value * -0.4 + 'px';
-    front4.style.marginTop  = value * 0.4 + 'px';
-    front3.style.marginTop  = value * 0.3 + 'px';
+    // front.style.marginTop  = value * 0.4 + 'px';
+    // front2.style.maskPosition = "100% 0%"
+
+    let tl = gsap.timeline({})
+
+    tl
+    .to(front2, { duration: 2, maskPosition: "0% 0%", ease: "steps(30)" })
 });
+
 
     var mySwiper = new Swiper ('.swiper-container', {
         // Optional parameters
@@ -78,6 +77,7 @@ let amountToScroll = allImageWidth - window.innerWidth;
 //         trigger: ".work",
 //         start: "top 0px",
 //         // end: "bottom 20px",
+//         // snap: 0.3,
 //         pin: true,
 //         scrub: 1,
 //     }
