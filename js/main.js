@@ -11,14 +11,15 @@ window.addEventListener('scroll', () => {
     // front.style.marginTop  = value * 0.4 + 'px';
     // front2.style.maskPosition = "100% 0%"
 
-    if(value > 50) {
-        let tl = gsap.timeline({})
 
-        tl
-        .to('.bg_overlay', { duration: 1.5, height: 0, ease: "expo.out" })
-    }
-    
+
 });
+
+let t3 = gsap.timeline({})
+
+t3
+.to('.bg_overlay', { duration: 2.5, height: 0, ease: "power3.inOut" })
+
 
 
     var mySwiper = new Swiper ('.swiper-container', {
