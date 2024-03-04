@@ -29,6 +29,7 @@ var mySwiper = new Swiper ('.swiper-container', {
         delay: 20000
     },
     effect: 'cube',
+    grabCursor: true,
     cubeEffect: {
         slideShadows: false,
         shadow: false,
@@ -104,9 +105,9 @@ tl
     delay: 0.1,
     scrollTrigger: {
         trigger: ".displayAd",
-        snap: 0.5,
+        // snap: 0.5,
         // markers: true,
-        scrub: 1
+        // scrub: 1
     },
     ease: 'expo.out'
 })
@@ -114,19 +115,18 @@ tl
 .to('.dynamicAd', {
     scrollTrigger: {
         trigger: ".dynamicAd",
-        snap: 0.5,
+        // snap: 0.5,
         // markers: true,
-        scrub: 1
+        // scrub: 1
     },
     ease: 'expo.out'
 })
 
-.to('.weboramaAd', {
+.to('.shadowAd', {
     scrollTrigger: {
-        trigger: ".weboramaAd",
-        snap: 0.5,
-        // markers: true,
-        scrub: 1
+        trigger: ".shadowAd",
+        // snap: 0.5,
+        // scrub: 1
     },
     ease: 'expo.out'
 })
@@ -140,8 +140,8 @@ gsap.from(".displayAd__head", {
     scrollTrigger: {
       trigger: ".displayAd",
       start: "top center",
-      end: "top 30vh",
-      scrub: true,
+      // end: "top 30vh",
+      // scrub: true,
       toggleActions: "restart none none none",
     },
     
@@ -156,8 +156,8 @@ gsap.from(".dynamicAd__head", {
     scrollTrigger: {
       trigger: ".dynamicAd",
       start: "top center",
-      end: "top 30vh",
-      scrub: true,
+      // end: "top 30vh",
+      // scrub: true,
       toggleActions: "restart none none none",
     }
 });
@@ -184,8 +184,8 @@ gsap.from(".weboramaAd__head", {
     scrollTrigger: {
       trigger: ".weboramaAd",
       start: "top center",
-      end: "top 30vh",
-      scrub: true,
+      // end: "top 30vh",
+      // scrub: true,
       toggleActions: "restart none none none",
     }
 });
@@ -208,8 +208,8 @@ gsap.from(".shadowAd__head", {
     scrollTrigger: {
       trigger: ".shadowAd",
       start: "top center",
-      end: "top 30vh",
-      scrub: true,
+      // end: "top 30vh",
+      // scrub: true,
       toggleActions: "restart none none none",
     }
 });
@@ -228,6 +228,52 @@ gsap.from(".shadowAd__head", {
 
 // })
 
+
+gsap.to(".displayAd__heading", {
+  backgroundPosition: "100% 100%",
+  scrollTrigger: {
+    trigger: ".displayAd",
+    start: "top 70vh",
+    end: "top -50vh",
+    scrub: true,
+    toggleActions: "restart none none none",
+  }
+});
+
+
+gsap.to(".dynamicAd__heading", {
+  backgroundPosition: "100% 30%",
+  scrollTrigger: {
+    trigger: ".dynamicAd",
+    start: "top 70vh",
+    end: "top -500px",
+    scrub: true,
+    toggleActions: "restart none none none",
+  }
+});
+
+
+gsap.to(".weboramaAd__heading", {
+  backgroundPosition: "100% -35%",
+  scrollTrigger: {
+    trigger: ".weboramaAd",
+    start: "top 90vh",
+    end: "top -500px",
+    scrub: true,
+    toggleActions: "restart none none none",
+  }
+});
+
+gsap.to(".shadowAd__heading", {
+  backgroundPosition: "100% -25%",
+  scrollTrigger: {
+    trigger: ".shadowAd",
+    start: "top 90vh",
+    end: "top -500px",
+    scrub: true,
+    toggleActions: "restart none none none",
+  }
+});
 
 
 
@@ -260,6 +306,193 @@ console.log(reveal)
 
     
 
+
+
+
+
+
+
+
+    let active = false;
+
+    let selectOne = document.getElementById('shadowAd__select--one');
+    let selectTwo = document.getElementById('shadowAd__select--two');
+    let selectThree = document.getElementById('shadowAd__select--three');
+    let selectFour = document.getElementById('shadowAd__select--four');
+
+    var beforeOne = document.getElementsByClassName('before_1');
+    var afterOne = document.getElementsByClassName('after_1');
+    
+    var beforeTwo = document.getElementsByClassName('before_2');
+    var afterTwo = document.getElementsByClassName('after_2');
+    
+    var beforeThree = document.getElementsByClassName('before_3');
+    var afterThree = document.getElementsByClassName('after_3');
+
+    var beforeFour = document.getElementsByClassName('before_4');
+    var afterFour = document.getElementsByClassName('after_4');
+  
+
+    selectOne.addEventListener('click', function() {
+
+      beforeOne[0].style.display = "block";
+      afterOne[0].style.display = "block";
+      beforeTwo[0].style.display = "none";
+      afterTwo[0].style.display = "none";
+      beforeThree[0].style.display = "none";
+      afterThree[0].style.display = "none";
+      beforeFour[0].style.display = "none";
+      afterFour[0].style.display = "none";
+
+      document.querySelector(".after_1").style.width = "175px";
+      document.querySelector(".scroller").style.left = "150px";
+      
+    });
+
+    selectTwo.addEventListener('click', function() {
+
+      beforeOne[0].style.display = "none";
+      afterOne[0].style.display = "none";
+      beforeTwo[0].style.display = "block";
+      afterTwo[0].style.display = "block";
+      beforeThree[0].style.display = "none";
+      afterThree[0].style.display = "none";
+      beforeFour[0].style.display = "none";
+      afterFour[0].style.display = "none";
+
+      document.querySelector(".after_2").style.width = "232px";
+      document.querySelector(".scroller").style.left = "207px";
+    });
+
+    selectThree.addEventListener('click', function() {
+
+      beforeOne[0].style.display = "none";
+      afterOne[0].style.display = "none";
+      beforeTwo[0].style.display = "none";
+      afterTwo[0].style.display = "none";
+      beforeThree[0].style.display = "block";
+      afterThree[0].style.display = "block";
+      beforeFour[0].style.display = "none";
+      afterFour[0].style.display = "none";
+
+      document.querySelector(".after_3").style.width = "175px";
+      document.querySelector(".scroller").style.left = "150px";
+    });
+
+    selectFour.addEventListener('click', function() {
+
+      beforeOne[0].style.display = "none";
+      afterOne[0].style.display = "none";
+      beforeTwo[0].style.display = "none";
+      afterTwo[0].style.display = "none";
+      beforeThree[0].style.display = "none";
+      afterThree[0].style.display = "none";
+      beforeFour[0].style.display = "block";
+      afterFour[0].style.display = "block";
+
+      document.querySelector(".after_4").style.width = "232px";
+      document.querySelector(".scroller").style.left = "207px";
+    });
+
+// First we'll have to set up our event listeners
+// We want to watch for clicks on our scroller
+document.querySelector(".scroller").addEventListener("mousedown", function () {
+  active = true;
+  // Add our scrolling class so the scroller has full opacity while active
+  document.querySelector(".scroller").classList.add("scrolling");
+});
+// We also want to watch the body for changes to the state,
+// like moving around and releasing the click
+// so let's set up our event listeners
+document.body.addEventListener("mouseup", function () {
+  active = false;
+  document.querySelector(".scroller").classList.remove("scrolling");
+});
+document.body.addEventListener("mouseleave", function () {
+  active = false;
+  document.querySelector(".scroller").classList.remove("scrolling");
+});
+
+// Let's figure out where their mouse is at
+document.body.addEventListener("mousemove", function (e) {
+  if (!active) return;
+  // Their mouse is here...
+  let x = e.pageX;
+  // but we want it relative to our wrapper
+  x -= document.querySelector(".wrapper").getBoundingClientRect().left;
+  // Okay let's change our state
+  scrollIt(x);
+});
+
+// Let's use this function
+function scrollIt(x) {
+
+  var beforeOne = document.getElementsByClassName('before_1');
+  var afterOne = document.getElementsByClassName('after_1');
+  
+  var beforeTwo = document.getElementsByClassName('before_2');
+  var afterTwo = document.getElementsByClassName('after_2');
+  
+  var beforeThree = document.getElementsByClassName('before_3');
+  var afterThree = document.getElementsByClassName('after_3');
+
+  var beforeFour = document.getElementsByClassName('before_4');
+  var afterFour = document.getElementsByClassName('after_4');
+
+  if(beforeOne[0].clientWidth > 0 || afterOne[0].clientWidth > 0) {
+    let transform = Math.max(
+      0,
+      Math.min(x, document.querySelector(".wrapper").offsetWidth)
+    );
+
+    document.querySelector(".after_1").style.width = transform + "px";
+    document.querySelector(".scroller").style.left = transform - 25 + "px";
+  }
+  if(beforeTwo[0].clientWidth > 0 || afterTwo[0].clientWidth > 0) {
+    let transform = Math.max(
+      0,
+      Math.min(x, document.querySelector(".wrapper").offsetWidth)
+    );
+    document.querySelector(".after_2").style.width = transform + "px";
+    document.querySelector(".scroller").style.left = transform - 25 + "px";
+  }
+  if(beforeThree[0].clientWidth > 0 || afterThree[0].clientWidth > 0) {
+    let transform = Math.max(
+      0,
+      Math.min(x, document.querySelector(".wrapper").offsetWidth)
+    );
+    document.querySelector(".after_3").style.width = transform + "px";
+    document.querySelector(".scroller").style.left = transform - 25 + "px";
+  }
+  if(beforeFour[0].clientWidth > 0 || afterFour[0].clientWidth > 0) {
+    let transform = Math.max(
+      0,
+      Math.min(x, document.querySelector(".wrapper").offsetWidth)
+    );
+    document.querySelector(".after_4").style.width = transform + "px";
+    document.querySelector(".scroller").style.left = transform - 25 + "px";
+  }
+  
+}
+
+// Let's set our opening state based off the width,
+// we want to show a bit of both images so the user can see what's going on
+scrollIt(150);
+
+// And finally let's repeat the process for touch events
+// first our middle scroller...
+document.querySelector(".scroller").addEventListener("touchstart", function () {
+  active = true;
+  document.querySelector(".scroller").classList.add("scrolling");
+});
+document.body.addEventListener("touchend", function () {
+  active = false;
+  document.querySelector(".scroller").classList.remove("scrolling");
+});
+document.body.addEventListener("touchcancel", function () {
+  active = false;
+  document.querySelector(".scroller").classList.remove("scrolling");
+});
 
 
 
