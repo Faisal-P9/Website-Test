@@ -265,7 +265,7 @@ gsap.to(".weboramaAd__heading", {
 });
 
 gsap.to(".shadowAd__heading", {
-  backgroundPosition: "100% -25%",
+  backgroundPosition: "100% -5%",
   scrollTrigger: {
     trigger: ".shadowAd",
     start: "top 90vh",

@@ -239,7 +239,8 @@ main {
   justify-content: center;
   align-items: center;
   padding: 10rem 0;
-  height: 100vh; }
+  height: 100vh;
+  margin-bottom: 20rem; }
   .displayAd__images {
     width: 100%; }
     .displayAd__images img {
@@ -264,6 +265,9 @@ iframe {
 .swiper-container {
   width: 300px;
   height: 250px; }
+
+.displayAd__swiper--bg {
+  position: absolute; }
 
 .swiper-button-prev {
   position: absolute;
@@ -315,7 +319,7 @@ iframe {
   align-items: center;
   padding: 20rem;
   height: 100vh;
-  background-color: #d3fded; }
+  background-color: #fff; }
   .dynamicAd__images {
     display: flex;
     flex-direction: row;
