@@ -440,10 +440,10 @@ function scrollIt(x) {
   var afterFour = document.getElementsByClassName('after_4');
 
   if(beforeOne[0].clientWidth > 0 || afterOne[0].clientWidth > 0) {
-    // let transform = Math.max(
-    //   0,
-    //   Math.min(x, document.querySelector(".wrapper").offsetWidth)
-    // );
+    let transform = Math.max(
+      0,
+      Math.min(x, document.querySelector(".wrapper").offsetWidth)
+    );
 
     document.querySelector(".after_1").style.width = transform + "px";
     document.querySelector(".scroller").style.left = transform - 25 + "px";
