@@ -89,23 +89,24 @@
                 </div>
 
                 <div class="col-1-of-2 displayAd__col2">
-                    <div class="displayAd__swiper-container swiper-container displayAd__head">
+                    <div class="swiper cubes displayAd__head" style="width: 300px; height: 250px; margin-left: 20px; margin-right: 20px;">
                         <!-- Additional required wrapper -->
-                        <div class="displayAd__swiper-wrapper swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="displayAd__swiper-slide swiper-slide"><div class="displayAd__swiper--bg"><iframe src="cube/300x250/1/index.html" title="slider one" width="300" height="250"></iframe></div></div>
-                            <div class="displayAd__swiper-slide swiper-slide"><div class="displayAd__swiper--bg"><iframe src="cube/300x250/2/index.html" title="slider one" width="300" height="250"></iframe></div></div>
-                            <div class="displayAd__swiper-slide swiper-slide"><div class="displayAd__swiper--bg"><iframe src="cube/300x250/3/index.html" title="slider one" width="300" height="250"></iframe></div></div>
-                            <div class="displayAd__swiper-slide swiper-slide"><div class="displayAd__swiper--bg"><iframe src="cube/300x250/4/index.html" title="slider one" width="300" height="250"></iframe></div></div>
+                        <div class="swiper-wrapper">
+                          <!-- Slides -->
+                          <div class="iframe-container-div swiper-slide" id="slide1">
+                            <iframe src="cube/300x250/1/index.html" width="300" height="250"></iframe>
+                          </div>
+                          <div class="iframe-container-div swiper-slide" id="slide2"></div>
+                          <div class="iframe-container-div swiper-slide" id="slide3"></div>
+                          <div class="iframe-container-div swiper-slide" id="slide4"></div>
                         </div>
-                
+                        <!-- If we need pagination -->
                         <!-- If we need pagination -->
                         <div class="swiper-pagination"></div>
 
                         <!-- If we need navigation buttons -->
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
-                    
                     </div>
                 </div>
             </div>
@@ -269,7 +270,14 @@
                 </div>
 
                 <div class="col-1-of-2 shadowAd__col2">
+
+                    
                     <div class="wrapper shadowAd__head">
+                        <div class="shadowAd__topSelect">
+                            <div class="shadowAd__topSelect--name shadowAd__topSelect--one">Before</div>
+                            <div class="shadowAd__topSelect--name shadowAd__topSelect--two">After</div>
+                        </div>
+
                         <div class="before before_1" id="before_1">
                           <img class="content-image" src="assets/clipping_after.jpg" draggable="false"/>   </div>
                         <div class="after after_1" id="after_1">
@@ -299,10 +307,13 @@
                         </div>
 
                         <div class="shadowAd__select">
-                            <img src="assets/clipping_after1.jpg" alt="" id="shadowAd__select--one">
+                            <div class="shadowAd__select--btn shadowAd__select--one" id="shadowAd__select--one">Image Clipping</div>
+                            <div class="shadowAd__select--btn" id="shadowAd__select--two">Product Organised</div>
+                            <div class="shadowAd__select--btn" id="shadowAd__select--three">Shadow Image</div>
+                            <!-- <img src="assets/clipping_after1.jpg" alt="" id="shadowAd__select--one">
                             <img src="assets/organised.jpg" alt="" id="shadowAd__select--two">
                             <img src="assets/shadow.jpg" alt="" id="shadowAd__select--three">
-                            <img src="assets/gif_image.jpg" alt="" id="shadowAd__select--four">
+                            <img src="assets/gif_image.jpg" alt="" id="shadowAd__select--four"> -->
                         </div>
                     </div>
                 </div>
